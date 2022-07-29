@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="toboid_amr">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0626966686919955 0.324999999999997 0.191467146640633"
+        rpy="0 0 0" />
+      <mass
+        value="0.462213571724635" />
+      <inertia
+        ixx="0.00091600053755879"
+        ixy="2.62311817703793E-18"
+        ixz="-0.000462675742572659"
+        iyy="0.0015331732209853"
+        iyz="3.59591556862736E-18"
+        izz="0.00096689590482164" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left">
+    <inertial>
+      <origin
+        xyz="0.0185262909295125 -0.00152611528993085 0.0577124098081633"
+        rpy="0 0 0" />
+      <mass
+        value="0.0319810746267886" />
+      <inertia
+        ixx="3.27140194103872E-05"
+        ixy="-1.86432980903298E-08"
+        ixz="8.74287360414389E-06"
+        iyy="3.2468363190406E-05"
+        iyz="-6.46808751767549E-07"
+        izz="2.79064332908438E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/front_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/front_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f_left"
+    type="continuous">
+    <origin
+      xyz="0.33999999999999 0.540000000000002 0.0363469274402164"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster1">
+    <inertial>
+      <origin
+        xyz="-8.19257828910125E-07 5.20148563443179E-07 2.15860652436062E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.17935695266917" />
+      <inertia
+        ixx="0.000148644295958208"
+        ixy="9.24700800067117E-06"
+        ixz="3.07443995363081E-09"
+        iyy="0.00027289314210383"
+        iyz="-3.14954956393747E-10"
+        izz="0.000147973018296655" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/caster1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/caster1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cast1"
+    type="continuous">
+    <origin
+      xyz="0.0428826975063044 -0.00317399662614659 0.014"
+      rpy="0 0 0" />
+    <parent
+      link="front_left" />
+    <child
+      link="caster1" />
+    <axis
+      xyz="0.0738138750266638 0.997272035030336 0" />
+  </joint>
+  <link
+    name="front_right">
+    <inertial>
+      <origin
+        xyz="0.0185378695353156 0.00137144502812035 0.0577123824416376"
+        rpy="0 0 0" />
+      <mass
+        value="0.0319810407588376" />
+      <inertia
+        ixx="3.27141879152011E-05"
+        ixy="1.79756746090617E-08"
+        ixz="8.74282808150112E-06"
+        iyy="3.24682820609342E-05"
+        iyz="6.474295976353E-07"
+        izz="2.79064187001974E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/front_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/front_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f_right"
+    type="continuous">
+    <origin
+      xyz="0.33999999999999 0.109999999999996 0.0363469274402135"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster2">
+    <inertial>
+      <origin
+        xyz="-8.83091387571255E-07 3.91255288403891E-07 2.14103426959822E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.179356998655612" />
+      <inertia
+        ixx="0.000148644302614055"
+        ixy="-9.24706119673542E-06"
+        ixz="3.073495176887E-09"
+        iyy="0.00027289315884874"
+        iyz="1.30060970394995E-10"
+        izz="0.000147973048472694" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/caster2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/caster2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cast2"
+    type="continuous">
+    <origin
+      xyz="0.0428826975063046 0.00317399662614661 0.014"
+      rpy="0 0 0" />
+    <parent
+      link="front_right" />
+    <child
+      link="caster2" />
+    <axis
+      xyz="-0.0738138750266658 0.997272035030336 0" />
+  </joint>
+  <link
+    name="back_left">
+    <inertial>
+      <origin
+        xyz="-0.0185378695353174 -0.00137144502811548 0.0577123824416379"
+        rpy="0 0 0" />
+      <mass
+        value="0.0319810407588365" />
+      <inertia
+        ixx="3.27141879152005E-05"
+        ixy="1.79756746088696E-08"
+        ixz="-8.74282808150105E-06"
+        iyy="3.24682820609334E-05"
+        iyz="-6.47429597635351E-07"
+        izz="2.79064187001966E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/back_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/back_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b_left"
+    type="continuous">
+    <origin
+      xyz="-0.340000000000016 0.539999999999999 0.0363469274402164"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster3">
+    <inertial>
+      <origin
+        xyz="8.77069177007694E-07 -3.95111844908591E-07 2.13495059214752E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.179356944610088" />
+      <inertia
+        ixx="0.000148644281314953"
+        ixy="-9.24704224232705E-06"
+        ixz="-3.0688625291833E-09"
+        iyy="0.000272893112201367"
+        iyz="-1.33503825734714E-10"
+        izz="0.000147973008770686" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/caster3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/caster3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cast3"
+    type="continuous">
+    <origin
+      xyz="-0.0428826975063045 -0.00317399662614692 0.014"
+      rpy="0 0 0" />
+    <parent
+      link="back_left" />
+    <child
+      link="caster3" />
+    <axis
+      xyz="0.0738138750266714 -0.997272035030336 0" />
+  </joint>
+  <link
+    name="back_right">
+    <inertial>
+      <origin
+        xyz="-0.0185262909295106 0.00152611528992695 0.0577124098081647"
+        rpy="0 0 0" />
+      <mass
+        value="0.0319810746267859" />
+      <inertia
+        ixx="3.27140194103846E-05"
+        ixy="-1.86432980908805E-08"
+        ixz="-8.74287360414429E-06"
+        iyy="3.24683631904028E-05"
+        iyz="6.46808751767542E-07"
+        izz="2.79064332908408E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/back_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/back_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b_right"
+    type="continuous">
+    <origin
+      xyz="-0.340000000000016 0.109999999999998 0.0363469274402134"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster4">
+    <inertial>
+      <origin
+        xyz="8.13088708750964E-07 -5.18231095397725E-07 2.14169417700472E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.17935697572413" />
+      <inertia
+        ixx="0.000148644302691065"
+        ixy="9.24701839280875E-06"
+        ixz="-3.06292784190372E-09"
+        iyy="0.000272893171326259"
+        iyz="3.19724294582864E-10"
+        izz="0.000147973049299385" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/caster4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/caster4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cast4"
+    type="continuous">
+    <origin
+      xyz="-0.0428826975063045 0.00317399662614687 0.014"
+      rpy="0 0 0" />
+    <parent
+      link="back_right" />
+    <child
+      link="caster4" />
+    <axis
+      xyz="-0.0738138750266786 -0.997272035030335 0" />
+  </joint>
+  <link
+    name="left_motor">
+    <inertial>
+      <origin
+        xyz="0.0031139929171683 -0.180999999910147 0.0579226188979096"
+        rpy="0 0 0" />
+      <mass
+        value="9.30766721308785" />
+      <inertia
+        ixx="0.717841231608288"
+        ixy="2.64005105195476E-06"
+        ixz="-0.00311967685772089"
+        iyy="0.479711667748635"
+        iyz="-5.60470653563331E-07"
+        izz="0.952921028333559" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/left_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/left_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_motor"
+    type="continuous">
+    <origin
+      xyz="0 0.506000000000002 0.0825000000000038"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_motor" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="right_motor">
+    <inertial>
+      <origin
+        xyz="7.81690934203993E-10 0.044214104202476 -1.7463386607075E-06"
+        rpy="0 0 0" />
+      <mass
+        value="3.02180869519929" />
+      <inertia
+        ixx="0.00524190202781709"
+        ixy="-1.86236221767162E-09"
+        ixz="2.7225914696441E-10"
+        iyy="0.0070963500748403"
+        iyz="4.14994315184624E-07"
+        izz="0.00524183790269708" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/right_motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://toboid_amr/meshes/right_motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_motor"
+    type="continuous">
+    <origin
+      xyz="0 0.0155000000000009 0.0825000000000006"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_motor" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  
+  
+  <gazebo>
+    <plugin filename="libgazebo_ros_diff_drive.so" name="gazebo_base_controller">
+      <!-- <ros>
+        <namespace>/hcr</namespace>
+      </ros> -->
+      <odometry_frame>odom</odometry_frame>
+      <!--commandTopic>cmd_vel</commandTopic-->
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+      <update_rate>10.0</update_rate>
+      <left_joint>leftjoint</left_joint>
+      <right_joint>rightjoint</right_joint>
+      <wheel_separation>0.26</wheel_separation>
+      <wheel_diameter>0.078</wheel_diameter>
+      <max_wheel_acceleration>0.7</max_wheel_acceleration>
+      <max_wheel_torque>8</max_wheel_torque>
+      <robotBaseFrame>base_link</robotBaseFrame>
+
+    </plugin>
+  </gazebo>
+
+<gazebo reference="base_link">
+  <material>Gazebo/White</material>
+</gazebo>
+
+<gazebo reference="front_left">
+  <material>Gazebo/Black</material>
+</gazebo>
+
+<gazebo reference="front_right">
+  <material>Gazebo/Black</material>
+</gazebo>
+
+<gazebo reference="back_left">
+  <material>Gazebo/Black</material>
+</gazebo>
+
+<gazebo reference="back_right">
+  <material>Gazebo/Black</material>
+</gazebo>
+
+<gazebo reference="caster1">
+  <material>Gazebo/Blue</material>
+</gazebo>
+
+<gazebo reference="caster2">
+  <material>Gazebo/Blue</material>
+</gazebo>
+
+<gazebo reference="caster3">
+  <material>Gazebo/Blue</material>
+</gazebo>
+
+<gazebo reference="caster4">
+  <material>Gazebo/Blue</material>
+</gazebo>
+
+<gazebo reference="left_motor">
+  <material>Gazebo/Green</material>
+</gazebo>
+
+<gazebo reference="right_motor">
+  <material>Gazebo/Green</material>
+</gazebo>
+
+  
+</robot>
